@@ -1,0 +1,23 @@
+{include file="include/head.html"}
+<div class="h_ctn">
+    <div class="w1100">
+        <a class="logo" title="" href="http://gary.com/p2p/"><strong></strong><img alt="" src="{$host}media/images/logo.png"></a>
+	</div>
+</div>
+<div class="m_ctn">
+	<div class="w1100">
+        <div class="nav">
+			<ul>
+				<li class="{if !$submenu_code}active{/if}"><a href="{$host}daikuan/" title="">贷款首页</a></li>
+				<li class="{if $submenu_code=="yongtu"}active{/if}"><a href="{$host}daikuan/yongtu/" title="">贷款用途</a></li>
+				<li class="{if $submenu_code=="leibie"}active{/if}"><a href="{$host}daikuan/leibie/" title="">贷款类别</a></li>
+				<li class="{if $submenu_code=="jigou"}active{/if}"><a href="{$host}daikuan/jigou/" title="">贷款机构</a></li>
+				<li class="{if $submenu_code=="gongju"}active{/if}"><a href="{$host}daikuan/gongju/" title="">贷款工具</a></li>
+				<li class="{if $submenu_code=="experience"}active{/if}"><a href="{$host}daikuan/experience/" title="">贷款攻略</a></li>
+				<li class="{if $submenu_code=="xinwen"}active{/if}"><a href="{$host}daikuan/chedai/" title="">新闻资讯</a></li>
+				<li class="{if $submenu_code=="jiameng"}active{/if}"><a href="{$host}daikuan/jiameng/" title="">合作加盟</a></li>
+			</ul>    
+		</div>
+		<div class="clearer"></div>
+    </div>
+</div>

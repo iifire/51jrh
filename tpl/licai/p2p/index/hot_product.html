@@ -1,0 +1,24 @@
+<table width="100%" class="hot-products">
+	<colgroup>
+		<col width="6%" />
+		<col width="34%" />
+		<col width="40%" />
+		<col width="20%" />
+	</colgroup>
+	<tbody>
+		{assign var="i" value="0"}
+		{foreach from=$product item=row}
+		<tr class="t">
+			<td rowspan="2">{$i=$i+1}<i class="cirle {if $i<4}top{/if}">{$i}</i></td>
+			<td class="name" colspan="2"><a href="#">{$row.product_name}</a></td>
+			
+			<td class="a-right">年华收益</td>
+		</tr>
+		<tr class="b">
+			<td class="per"><div class="progress no-margin"><span class="complete" style="width:50%"></span></div></td>
+			<td class="a-left">{$row.product_amount_start}元起投&nbsp;&nbsp;{$row.product_period}</span>{if $row.product_period_unit=0}天{else}月{/if}</td>				
+			<td class="rate a-right">{$row.product_rate}%</td>
+		</tr>
+		{/foreach}
+	</tbody>
+</table>

@@ -1,0 +1,15 @@
+<div class="block wiki-block">
+	<div class="block-title pr">
+		<h2>P2P百科</h2>
+		<a class="more f-right pa" title="更多" href="">更多&gt;&gt;</a>
+	</div>
+	<div class="clearer"></div>
+	<div class="block-content p10">
+		<ul class="links">
+			{foreach from=$wiki_artile item=row}
+			<li class=""><a href="{$host}wiki/view/{$row.article_id}" title="{$row.article_title}" target="_blank">{$row.article_title}</a></li>
+			{/foreach}
+		</ul>
+	
+	</div>
+</div>

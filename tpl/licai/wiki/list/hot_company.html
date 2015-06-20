@@ -1,0 +1,7 @@
+<div class="img-list">
+	<ul class="links">
+		{foreach from=$company_hot item=row}
+		<li><a href="{$row.company_url}" title="{$row.company_name}" target="_blank"><img width="178" alt="{$row.company_name}" title="{$row.company_name}" src="{$IMG_PATH}logo/{$row.company_code}.png" /></a></li>
+		{/foreach}
+	</ul>
+</div>

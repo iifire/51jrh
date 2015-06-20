@@ -1,0 +1,82 @@
+/* jqModal base Styling courtesy of;
+	Brice Burgess <bhb@iceburg.net> */
+
+/* The Window's CSS z-index value is respected (takes priority). If none is supplied,
+	the Window's z-index value will be set to 3000 by default (via jqModal.js). */
+	
+.jqmWindow {
+    background-color: #fff;
+    border: 1px solid #929292;
+    border-radius: 5px;
+    box-shadow: 0 3px 26px rgba(0, 0, 0, 0.9);
+    color: #333;
+    display: none;
+    left: 50%;
+    margin-left: -300px;
+    min-height: 100px;
+    padding: 3px;
+    position: fixed;
+    top: 38%;
+    width: 500px;
+}
+
+.jqmWindow h2 {
+    background: none repeat scroll 0 0 #f5f6f7;
+    border-bottom: 1px solid #dcdcdc;
+    border-left: 3px solid #f6545f;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    height: 42px;
+    line-height: 42px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    text-align: left;
+    margin:0;
+}
+.jqmWindow .content {
+    color: #666;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 25px;
+    padding: 25px;
+    min-height: 60px;
+}
+.jqmWindow .success {
+	color: #fd8238;
+}
+.jqmWindow .warning {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #df280a;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 25px;
+}
+.jqmClose {
+    background: url("../images/dialog_bg.png") no-repeat scroll 0 -60px rgba(0, 0, 0, 0);
+    height: 34px;
+    position: absolute;
+    right: -16px;
+    text-indent: -999em;
+    top: -16px;
+    width: 34px;
+}
+.jqmClose:hover {
+	background-position:0 -94px;
+}
+.jqmOverlay { background-color: #000; }
+
+/* Background iframe styling for IE6. Prevents ActiveX bleed-through (<select> form elements, etc.) */
+* iframe.jqm {position:absolute;top:0;left:0;z-index:-1;
+	width: expression(this.parentNode.offsetWidth+'px');
+	height: expression(this.parentNode.offsetHeight+'px');
+}
+
+/* Fixed posistioning emulation for IE6
+     Star selector used to hide definition from browsers other than IE6
+     For valid CSS, use a conditional include instead */
+* html .jqmWindow {
+     position: absolute;
+     top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');
+}

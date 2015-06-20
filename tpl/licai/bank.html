@@ -1,0 +1,157 @@
+{include file="licai/header.html"}
+{include file="licai/submenu.html"}
+<div class="c_ctn col1">
+    <div class="main w1100">
+    	<div class="breadcrumbs">
+    		<ul>
+    			<li class="home">
+                    <a title="MAYA首页" href="{$host}">MAYA首页</a>
+                    <span class="gt">&gt;&gt;</span>
+                    
+                </li>
+                <li>
+                    <a title="" href="{$host}licai/">理财频道</a>
+                    <span class="gt">&gt;&gt;</span>
+                </li>
+                <li>
+                    <a title="" href="{$host}licai/bank/">银行理财</a>
+                    <span class="gt">&gt;&gt;</span>
+                </li>
+                <li>银行理财首页</li>
+            </ul>
+        </div>
+        <div class="w1100">
+			<div class="col-main">
+				<div class="f-left box w340">
+					<div class="sub-title pr">
+			    		<h2>银行理财产品人气排行榜</h2>
+			    		<p class="more pa"><a href="" title="">更多&gt;&gt;</a></p>
+			    		<div class="clearer"></div>
+		    		</div>
+		    		<div class="">
+		    			{assign var=product value=$hot_product}
+		    			{include file="licai/bank/index/hot_product.html"}
+		    			
+		    		</div>
+					<div class="clearer"></div>
+				</div>
+				<div class="f-right w370 box">
+					<div class="sub-title pr">
+			    		<h2>热点关注</h2>
+			    		<p class="more pa"><a href="" title="">更多&gt;&gt;</a></p>
+			    		<div class="clearer"></div>
+		    		</div>
+		    		<div class="">
+		    			{include file="licai/p2p/index/hot_news.html"}
+		    			
+		    		</div>
+					<div class="clearer"></div>
+				</div>
+				<div class="clearder"></div>
+				<div class="f-left box w340 mt15">
+					<ul class="tabs tabs-title f-fix">
+			    		<li class="active"><h2><a href="#hot_default">按起购金额</a></h2></li>
+			    		<li><h2><a href="#hot_highrate" class="">按投资期限</a></h2></li>
+			    		<li><h2><a href="#hot_shortperiod" class="">按收益类型</a></h2></li>
+		    		</ul>
+		    		<div class="clearer"></div>
+		    		<div class="padder">
+		    			<div id="hot_default" class="tab-content">
+		    				{assign var=product value=$hot_default}
+		    				{include file="licai/bank/index/hot_product.html"}
+		    			</div>
+		    			<div id="hot_highrate" class="tab-content" style="display:none;">
+		    				{assign var=product value=$hot_highrate}
+		    				{include file="licai/bank/index/hot_product.html"}
+		    			</div>
+		    			<div id="hot_shortperiod" class="tab-content" style="display:none;">
+		    				{assign var=product value=$hot_shortperiod}
+		    				{include file="licai/bank/index/hot_product.html"}
+		    			</div>
+		    		</div>
+				</div>
+				<div class="clearer"></div>
+				<div class="box mt15">
+					<div class="sub-title pr">
+			    		<h2>热门产品推荐</h2>
+			    		<p class="more pa"><a href="" title="">更多&gt;&gt;</a></p>
+			    		<div class="clearer"></div>
+		    		</div>
+		    		<div class="">
+		    			{include file="licai/bank/index/hot_product.html"}
+		    			
+		    		</div>
+					<div class="clearer"></div>
+				</div>
+				<div class="clearder"></div>
+				<div class="f-left box w340">
+					<div class="sub-title pr">
+			    		<h2>市场动态</h2>
+			    		<p class="more pa"><a href="" title="">更多&gt;&gt;</a></p>
+			    		<div class="clearer"></div>
+		    		</div>
+		    		<div class="">
+		    			{assign var=product value=$hot_product}
+		    			{include file="licai/bank/index/hot_product.html"}
+		    			
+		    		</div>
+					<div class="clearer"></div>
+				</div>
+				<div class="f-right w370 box">
+					<div class="sub-title pr">
+			    		<h2>政策解读</h2>
+			    		<p class="more pa"><a href="" title="">更多&gt;&gt;</a></p>
+			    		<div class="clearer"></div>
+		    		</div>
+		    		<div class="">
+		    			{include file="licai/p2p/index/hot_news.html"}
+		    			
+		    		</div>
+					<div class="clearer"></div>
+				</div>
+				<div class="clearder"></div>
+				<div class="f-fix box mt15">
+					<ul class="tabs tabs-title f-fix">
+			    		<li class="active"><h2><a href="#hot_default">年化收益走势</a></h2></li>
+			    		<li><h2><a href="#hot_highrate" class="">新产品数量走势</a></h2></li>
+			    		<li><h2><a href="#hot_shortperiod" class="">起购金额分布</a></h2></li>
+			    		<li><h2><a href="#hot_shortperiod" class="">投资期限分布</a></h2></li>
+		    		</ul>
+		    		<div class="clearer"></div>
+		    		<div class="padder">
+		    			<div id="hot_default" class="tab-content">
+		    				{assign var=product value=$hot_default}
+		    				{include file="licai/bank/index/hot_product.html"}
+		    			</div>
+		    			<div id="hot_highrate" class="tab-content" style="display:none;">
+		    				{assign var=product value=$hot_highrate}
+		    				{include file="licai/bank/index/hot_product.html"}
+		    			</div>
+		    			<div id="hot_shortperiod" class="tab-content" style="display:none;">
+		    				{assign var=product value=$hot_shortperiod}
+		    				{include file="licai/bank/index/hot_product.html"}
+		    			</div>
+		    		</div>
+					<div class="clearder"></div>
+				</div>
+				
+				
+				
+			</div>
+		    <div class="col-right sidebar">
+		    
+		    </div>
+        	
+        </div>
+        <!--口碑-->
+        <div class="f-fix box mt15">
+			<div class="sub-title pr ">
+	    		<h2>友情链接</h2>
+	    		<div class="clearer"></div>
+    		</div>
+    		
+			<div class="clearder"></div>
+		</div>
+    </div>
+</div>
+{include file="include/footer.html"}

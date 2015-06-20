@@ -1,0 +1,36 @@
+<div class="rating-tab">
+            <div class="tab-tabcontent mt10">
+                <div class="tab-div" style="display:block;">
+                    <table cellspacing="0" cellpadding="0" class="data-table">
+                        <thead>
+                            <tr>
+                                <td>产品名称</td>
+                                <td>发行机构</td>
+                                <td>目前资金规模</td>
+                                <td>昨日万份收益</td>
+                                <td>7日年化利率</td>
+                                <td>起购金额</td>
+                                <td>单日提取上限</td>
+                                <td>提现速度	</td>
+                                <td width="60px">&nbsp;</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        	{foreach from=$product item=row}
+                             <tr>
+                                <td class="a-center">{$row.product_name}</td>
+                                <td class="a-center">{$row.product_company}</td>
+                                <td class="a-right">{$row.product_scale}亿元</td>
+                                <td class="a-right">{$row.product_profit_yesterday}元</td>
+                                <td class="a-right">{$row.product_rate_week}%</td>
+                                <td class="a-right">{$row.product_money_start}元</td>
+                                <td class="a-right">{$row.product_withdraw_limit}万</td>
+                                <td class="a-center">{$row.product_withdraw_speed}</td>
+                                <td class="a-center"><a href="" target="_blank" title="查看{$row.product_name}详情">查看</a></td>
+                            </tr>      
+                            {/foreach}                                    
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>

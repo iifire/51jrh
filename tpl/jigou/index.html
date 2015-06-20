@@ -1,0 +1,117 @@
+{include file="jigou/header.html"}
+{include file="jigou/submenu.html"}
+<div class="c_ctn col1">
+    <div class="main w1100">
+    	<div class="breadcrumbs">
+    		<ul>
+    			<li class="home">
+                    <a title="MAYA首页" href="{$host}">MAYA首页</a>
+                    <span class="gt">&gt;&gt;</span>
+                    
+                </li>
+                <li class="home">
+                    <a title="" href="{$host}licai/p2p/">机构库</a>
+                    <span class="gt">&gt;&gt;</span>
+                </li>
+                <li>机构库首页</li>
+            </ul>
+        </div>
+        <div class="w1100">
+			<div class="col-main">
+				<div class="f-left box w340">
+					<ul class="tabs tabs-title f-fix">
+			    		<li class="active"><h2><a href="#hot_default">综合排行</a></h2></li>
+			    		<li><h2><a href="#hot_highrate" class="">收益高</a></h2></li>
+			    		<li><h2><a href="#hot_shortperiod" class="">期限短</a></h2></li>
+		    		</ul>
+		    		<div class="clearer"></div>
+		    		<div class="padder">
+		    			<div id="hot_default" class="tab-content">
+		    				{assign var=product value=$hot_default}
+		    				{include file="licai/net/index/hot_product.html"}
+		    			</div>
+		    			<div id="hot_highrate" class="tab-content" style="display:none;">
+		    				{assign var=product value=$hot_highrate}
+		    				{include file="licai/net/index/hot_product.html"}
+		    			</div>
+		    			<div id="hot_shortperiod" class="tab-content" style="display:none;">
+		    				{assign var=product value=$hot_shortperiod}
+		    				{include file="licai/net/index/hot_product.html"}
+		    			</div>
+		    		</div>
+				</div>
+				<div class="f-right w370 box">
+					<div class="sub-title pr">
+			    		<h2>热点关注</h2>
+			    		<p class="more pa"><a href="" title="">更多&gt;&gt;</a></p>
+			    		<div class="clearer"></div>
+		    		</div>
+		    		<div class="">
+		    			{include file="licai/p2p/index/hot_news.html"}
+		    			
+		    		</div>
+					<div class="clearer"></div>
+				</div>
+				<div class="clearder"></div>
+				<div class="f-fix box mt15">
+					<div class="sub-title pr ">
+			    		<h2>P2P平台热门活动</h2>
+			    		<p class="more pa"><a href="" title="">更多&gt;&gt;</a></p>
+			    		<div class="clearer"></div>
+			    		
+		    		</div>
+		    		<div class="mt10">
+			    		<ul class="links slider-small">
+			    		{foreach from=$company_act item=row}
+			    			<li>
+			    				<p class="img"><a  href="{$row.act_url}" target="_blank" title="{$row.act_title}"><img alt="{$row.act_title}" src="{$host}{$row.act_img}" width="180" height="120" /></a></p>
+			    				<p class="no-margin"><a href="{$row.act_url}" target="_blank" title="{$row.act_title}">{$row.act_title}</a></p>
+			    			</li>
+			    		{/foreach}
+			    		</ul>
+		    		</div>
+					<div class="clearder"></div>
+				</div>
+				<div class="f-fix box mt15">
+					<div class="sub-title pr ">
+			    		<h2>P2P理财品牌专区</h2>
+			    		<p class="more pa"><a href="" title="">更多&gt;&gt;</a></p>
+			    		<div class="clearer"></div>
+		    		</div>
+		    		{include file="licai/list/hot_company.html"}
+					<div class="clearder"></div>
+				</div>
+				<div class="f-fix box mt15">
+					<div class="sub-title pr ">
+			    		<h2>P2P平台评级</h2>
+			    		<p class="more pa"><a href="" title="">我要上榜/我要踢馆</a></p>
+			    		<div class="clearer"></div>
+		    		</div>
+		    		{include file="licai/p2p/index/rating_company.html"}
+					<div class="clearder"></div>
+				</div>
+				<div class="f-fix box mt15">
+					<div class="sub-title pr ">
+			    		<h2>平台导航</h2>
+			    		<div class="clearer"></div>
+		    		</div>
+		    		
+					<div class="clearder"></div>
+				</div>
+			</div>
+		    <div class="col-right sidebar">
+		    
+		    </div>
+        	
+        </div>
+        <div class="f-fix box mt15">
+			<div class="sub-title pr ">
+	    		<h2>友情链接</h2>
+	    		<div class="clearer"></div>
+    		</div>
+    		
+			<div class="clearder"></div>
+		</div>
+    </div>
+</div>
+{include file="include/footer.html"}

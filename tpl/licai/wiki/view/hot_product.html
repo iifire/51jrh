@@ -1,0 +1,14 @@
+<div class="block">
+	<div class="block-title">
+		<h2>热门产品推荐</h2>
+	</div>
+	<div class="block-content">
+		<ul clas="links">
+			{foreach from=$product_hot item=row}
+			<li><a href="{$host}licai/view/id/{$row.product_id}" title="{$row.product_name}：{$row.product_hot_slogan}" target="_blank">{$row.product_name}|{$row.product_sku_outer}&nbsp;&nbsp;{$row.product_rate}%&nbsp;/&nbsp;{$row.product_period}</span>{if $row.product_period_unit=0}天{else}月{/if}</a></li>
+			{/foreach}
+		
+		</ul>
+	
+	</div>
+</div>

@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$host}</title>
+<meta name="description" content="{$host}" />
+<meta name="keywords" content="{$host}" />
+<meta name="robots" content="INDEX,FOLLOW" />
+<link rel="icon" href="{$host}favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="{$host}favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="{$host}media/css/font-awesome.css" media="all" />
+<link rel="stylesheet" type="text/css" href="{$host}media/css/styles.css" media="all" />
+<link rel="stylesheet" type="text/css" href="{$host}media/css/modal.css" media="all" />
+<link rel="stylesheet" type="text/css" href="{$host}media/css/jquery-ui.css" media="all" />
+<link rel="stylesheet" type="text/css" href="{$host}media/css/slider.css" media="all" />
+<script type="text/javascript" src="{$host}media/js/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="{$host}media/js/jquery/jquery-ui.min.js"></script>
+<script type="text/javascript" src="{$host}media/js/jquery/jquery.modal.js"></script>
+<script type="text/javascript" src="{$host}media/js/com.js"></script>
+<script type="text/javascript" src="{$host}media/js/jquery/jquery.chosen.js"></script>
+<script type="text/javascript" src="{$host}media/js/cookies.js"></script>
+<!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" href="{$host}media/css/styles-ie.css" media="all" />
+<![endif]-->
+<script type="text/javascript">
+//<![CDATA[
+Maya.Cookies.path     = '/myframework';
+Maya.Cookies.domain   = '.gary.com';
+//]]>
+</script>
+</head>
+<body class=" catalog-category-view categorypath-invest-html category-invest">
+<div class="h_tb">
+	<div class="w1100">
+		<ul class="channel f-left no-margin">
+			<li class="{if !$menu_flag}active{/if}"><a href="{$host}" title="MAYA首页"><i class="fa fa-home"></i>MAYA首页</a></li>
+			<li class="{if $menu_flag=="licai"}active{/if}"><a href="{$host}licai/" title="理财"><i class="fa fa-calculator"></i>理财</a></li>
+			<li class="{if $menu_flag=="daikuan"}active{/if}"><a href="{$host}daikuan/" title="贷款"><i class="fa fa-jpy"></i>贷款</a></li>
+			<li class="{if $menu_flag=="credit"}active{/if}"><a href="{$host}credit/" title="信用卡"><i class="fa fa-cc-visa"></i>信用卡</a></li>
+			<li class="{if $menu_flag=="jigou"}active{/if}"><a href="{$host}jigou/" title="机构库">机构库</a></li>
+			<li><a href="#" title="资讯中心">资讯中心</a></li>
+			<li><a href="#" title="最佳问答">最佳问答</a></li>
+			<li><a href="#" title="百科大全">百科大全</a></li>
+			
+			<li><a href="#" title="政策法规">政策法规</a></li>
+			<li><a href="#" title="理财APP"><i class="fa fa-mobile"></i>App</a></li>
+		</ul>
+		<ul class="links">
+			<!--<li><a title="关注MAYA" href="#">关注MAYA</a></li>-->
+			<li class="last"><a title="网站导航" href="#">网站导航<i class="icon arrow-down"></i></a></li>
+		</ul>
+	</div>
+</div>
+<div class="clearer"></div>

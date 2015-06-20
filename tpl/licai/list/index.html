@@ -1,0 +1,123 @@
+<script src="{$JS_PATH}charts.js" type="text/javascript"></script>
+<script src="{$JS_PATH}charts/theme.grey.js" type="text/javascript"></script>
+<script src="{$JS_PATH}mycharts.js" type="text/javascript"></script>
+<div class="c_ctn col1">
+    <div class="main w1100">
+    	<div class="breadcrumbs">
+    		<ul>
+    			<li class="home">
+                    <a title="MAYA首页" href="{$host}">MAYA首页</a>
+                    <span class="gt">&gt;&gt;</span>
+                    
+                </li>
+                <li>P2P理财</li>
+            </ul>
+        </div>
+        <div class="col-main">
+        	<div class="box">
+        		<div class="sub-title">
+		    		<h2>最新理财产品</h2>
+		    		<div class="clearer"></div>
+	    		</div>
+	    		<div class="clearer"></div>
+		    	<div class="products-box">
+		    		{assign var=product_hot value=$product_hot}
+		    		{include file="licai/list/hot_product.html"}
+		    	</div>
+		    </div>
+		    <div class="box mt15 pingtai-box">
+		    	<div class="sub-title">
+		    		<h2>P2P理财品牌专区</h2>
+		    		<div class="clearer"></div>
+	    		</div>
+		    	<div class="clearer"></div>
+		    	<div class="products-box">
+		    		{include file="licai/list/hot_company.html"}
+		    	</div>
+		    </div>
+        	<div class="box mt15">
+        		<div class="sub-title">
+		    		<h2>P2P平台热门活动</h2>
+		    		<div class="clearer"></div>
+	    		</div>
+		    	<div class="clearer"></div>
+		    	<div class="">
+		    		<ul class="links slider-small">
+		    		{foreach from=$company_act item=row}
+		    			<li>
+		    				<p><a href="{$row.act_url}" target="_blank" title="{$row.act_title}"><img alt="{$row.act_title}" src="{$host}{$row.act_img}" width="180" height="120" /></a></p>
+		    				<p class="no-margin"><a href="{$row.act_url}" target="_blank" title="{$row.act_title}">{$row.act_title}</a></p>
+		    			</li>
+		    		{/foreach}
+		    		</ul>
+		    		<div class="clearer"></div>
+		    	</div>
+		    </div>
+		    <div class="box mt15">
+		    	<ul class="tabs tabs-big sub-title f-fix">
+		    		<li><h2><a class="active" href="">P2P理财产品收益走势</a></h2></li>
+		    		<li><h2><a class="" href="">P2P理财市场总体走势</a></h2></li>
+		    		<li><h2><a class="" href="">P2P理财投资流程</a></h2></li>
+	    		</ul>
+	    		<div class="clearer"></div>
+		    	<div class="padder">
+		    		<div id="chart_1">
+		    		
+		    		</div>
+		    		<script>
+					$('#chart_1').commchart({
+						cht:'lc', //The chart type
+						chs:'700x300', //The chart size
+						chd:'t:13.50,13.70,14.75,12.50,13.30,15.50,13.30,15.50,13.30,15.50', //The chart data. t代表是简单的文本格式(目前也只支持t)，|符号分隔不同系列的数据
+						chco:'#fd8238,#000000,#0098e1', //The chart color. 16进制表示的颜色，留空或不足则系统自动分配
+						chdl:'', //The chart data legend.
+						chxl:'2014-05|2014-06|2014-07|2014-08|2014-09|2014-10|2014-11|2014-12|2015-01|2015-02|2015-03|2015-04',
+						chtt:'年华收益率(%)', //The chart title
+						chpc: false,
+						chcn:'chart_1',
+						legend: {
+							align: 'right',
+				            verticalAlign: 'top',
+				            x: 0,
+				            y: -10,
+				            floating: true
+						}
+					})
+					</script>
+		    		<div id="chart_2">
+		    		
+		    		</div>
+		    		<div id="chart_3">
+		    		
+		    		</div>
+		    	</div>
+		    </div>
+        </div>
+        <div class="col-right sidebar">
+        	<div class="block">
+        		<!--APP-->
+        	
+        	</div>
+    		<div class="block">
+        		<!--P2P理财计算器-->
+        		{include file="sidebar/jisuanqi.html"}
+        	</div>
+        	<div class="block">
+        		<!--P2P百科-->
+        		{include file="sidebar/wiki_article.html"}
+        	</div>
+        	<div class="block">
+        		<!--平台排行-->
+        	
+        	</div>
+        </div>
+    </div>
+    <div class="w1100">
+    	<div class="box">
+	    	<h2>网贷平台</p>
+	    	<div class="">
+	    	
+	    	</div>
+	    </div>
+    </div>
+</div>

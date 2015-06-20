@@ -1,0 +1,14 @@
+{include file="include/head.html"}
+<div class="h_ctn">
+    <div class="w1100">
+        <a class="logo" title="万米E贷" href="http://gary.com/p2p/"><strong>万米E贷</strong><img alt="万米E贷" src="{$host}media/images/logo.png"></a>
+        <div class="nav">
+			<ul>
+				<li><a href="{$host}licai/" title="">首页</a></li>
+				{foreach from=$menu item=row}
+				<li><a href="{$host}licai/list/id/{$row.category_id}" title="">{$row.category_name}</a></li>
+				{/foreach}
+			</ul>    
+		</div>
+    </div>
+</div>

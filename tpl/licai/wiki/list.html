@@ -1,0 +1,144 @@
+{include file="include/header.html"}
+<div class="c_ctn col1">
+    <div class="main w1100">
+    	<div class="breadcrumbs">
+    		<ul>
+    			<li class="home">
+                    <a title="MAYA首页" href="{$host}">MAYA首页</a>
+                    <span class="gt">&gt;</span>
+                    
+                </li>
+                <li>
+                	{$category.category_name}
+            	</li>
+            </ul>
+        </div>
+        <div class="w1100">
+
+		    <div class="filter-top mb10 f-fix">
+		    	<div class="filter-item f-fix">
+			    	<p>平台来源</p>
+			    	<ul>
+			    		<li><a href="#" class="active">不限</a></li>
+			    	</ul>
+		    	</div>
+		    	<div class="filter-item f-fix">
+			    	<p>投资期限</p>
+			    	<ul>
+			    		<li><a href="#" class="active">不限</a></li>
+			    		<li><a href="#">1个月内</a></li>
+			    		<li><a href="#">1-3个月</a></li>
+			    		<li><a href="#">3-6个月</a></li>
+			    		<li><a href="#">6-12个月</a></li>
+			    		<li><a href="#">12个月以上</a></li>
+			    	</ul>
+		    	</div>
+		    	<div class="filter-item f-fix">
+			    	<p>年化收益</p>
+			    	<ul>	
+			    		<li><a href="#" class="active">不限</a></li>
+			    		<li><a href="#">6%以下</a></li>
+			    		<li><a href="#">6%-8%</a></li>
+			    		<li><a href="#">8%-12%</a></li>
+			    		<li><a href="#">12%-16%</a></li>
+			    		<li><a href="#">16%以上</a></li>
+			    	</ul>
+		    	</div>
+		    	<div class="filter-item f-fix last">
+			    	<p>起投金额</p>
+			    	<ul>
+			    		<li><a href="#" class="active">不限</a></li>
+			    		<li><a href="#">0-1元</a></li>
+			    		<li><a href="#">1-50元</a></li>
+			    		<li><a href="#">50-100元</a></li>
+			    		<li><a href="#">100-1000元</a></li>
+			    		<li><a href="#">1000-1万元</a></li>
+			    		<li><a href="#">1万-5万元</a></li>
+			    		<li><a href="#">5万以上</a></li>
+			    	</ul>
+		    	</div>
+		    	<!--
+		    	<div class="filter-item f-fix last">
+			    	<p>收益方式</p>
+			    	<ul>
+			    		<li><a href="#" class="active">不限</a></li>
+			    		<li><a href="#">每月等额本息</a></li>
+			    		<li><a href="#">一次性还本付息</a></li>
+			    		<li><a href="#">每月还息，到期还本</a></li>
+			    	</ul>
+		    	</div>
+		    	-->
+		    	<div class="clearer"></div>
+		    </div>
+		    <div class="clearer"></div>
+        	<div class="category-products mt40">
+        		<div class="toolbar">
+			        <div class="order">
+				        <ul class="btns">
+				            <li class="cur asc ">
+				                <a class="" onclick="setLocation('http://gary.com/p2p/invest.html?dir=desc&amp;order=position')" href="javascript:void(0)"><span>默认排序</span></a><b></b>
+				            </li>
+				            <li class=" ">
+				                <a class="" onclick="setLocation('http://gary.com/p2p/invest.html?dir=asc&amp;order=moneyrate')" href="javascript:void(0)"><span>收益率</span></a><b></b>
+				            </li>
+				            <li class=" ">
+				                <a class="" onclick="setLocation('http://gary.com/p2p/invest.html?dir=asc&amp;order=moneyperiod')" href="javascript:void(0)"><span>投资期限计算单位</span></a><b></b>
+				            </li>
+				            <li class=" ">
+				                <a class="" onclick="setLocation('http://gary.com/p2p/invest.html?dir=asc&amp;order=moneyperiod_amount')" href="javascript:void(0)"><span>投资期限日期大小</span></a><b></b>
+				            </li>
+				        </ul>
+				        <div class="right pages"></div>
+				    </div>
+				    
+			        <div class="filter"></div>
+				    <div class="clearer"></div>
+				</div>
+        		<table id="products-list" class="products-list licai-list"  width="100%">
+        			<colgroup>
+        				<col width="16%"/>
+                		<col width="47%"/>
+                		<col width="17%"/>
+                		<col width="20%"/>
+            		</colgroup>
+            		<tbody>
+        			{foreach from=$product item=row}
+            			<tr>
+            				<td class="a-center img">
+            					<img src="{$IMG_PATH}logo/lufax.png" height="90"/>
+            				</td>
+            				<td class="top">
+            					<dl>
+            						<dt>
+            							<a href="#">{$row.product_name}&nbsp;|&nbsp;{$row.product_sku_outer}</a>
+            							<span>年华收益<span class="number cred">{$row.product_rate}</span>%</span>
+            							<span>投资期限<span class="number cred">{$row.product_period}</span>{if $row.product_period_unit=0}天{else}月{/if}</span>
+            						</dt>
+            						<dd>
+            							<span>借款金额：{$row.product_amount}万元</span>
+            							<span>起投金额：{$row.product_amount_start}元</span>
+            							<span>{$row.product_pay_method}</span>
+            						</dd>
+            					</dl>
+            				</td>
+            				<td class="">
+            					<div class="progress"><span class="complete" style="width:50%"></span></div>
+            					<div class="clearer"></div>
+            					<p class="no-margin mt5">剩余金额:</p>
+            				</td>
+            				<td class="">
+            					<div class="btns">
+            						<a class="button view mr10" href="{$host}licai/view/id/{$row.product_id}"><span>查看</span></a>
+            						<button class="button go"><span>投标</span></button>
+            					</div>
+            				</td>
+            				
+            			</tr>
+			        {/foreach}
+			        </tbody>
+            	</table>
+        	</div>
+        </div>
+    </div>
+</div>
+{include file="include/footer.html"}

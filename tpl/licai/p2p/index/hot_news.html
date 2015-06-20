@@ -1,0 +1,20 @@
+<ul class="hot-news">
+	{foreach from=$hot_news item=row}
+	<li>
+	    <div class="l">
+	    	<a title="{$row.news_title}" href="#">
+	        <img src="" height="62px" width="88px">
+         	</a>
+     	</div>
+	    <div class="r">
+	        <p class="p1">
+	            <a target="_blank" href="" title="{$row.news_title}">{$row.news_title}</a><span>new</span>
+            </p>
+	        <div class="clearfix">
+	            <div class="tag">P2P</div>
+	            <span class="date">05-28</span>
+	        </div>
+	    </div>  
+	</li>
+	{/foreach}
+</ul>

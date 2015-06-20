@@ -1,0 +1,37 @@
+<table width="100%" class="products-list licai-list">
+	<colgroup>
+		<col width="15%">
+		<col width="70%">
+		<col width="15%">
+	</colgroup>
+	<tbody>
+		{foreach from=$product_hot item=row}
+		<tr>
+			<td class="a-center img">
+				<img src="{$IMG_PATH}logo/lufax.png" height="60"/>
+			</td>
+			<td class="top p0">
+				<dl>
+					<dt>
+						<a href="#">{$row.product_name}&nbsp;|&nbsp;{$row.product_sku_outer}</a>
+						<span>年华收益<span class="number cred">{$row.product_rate}</span>%</span>
+						<span>投资期限<span class="number cred">{$row.product_period}</span>{if $row.product_period_unit=0}天{else}月{/if}</span>
+					</dt>
+					<dd>
+						<span>借款金额：{$row.product_amount}万元</span>
+						<span>起投金额：{$row.product_amount_start}元</span>
+						<span>{$row.product_pay_method}</span>
+					</dd>
+				</dl>
+			</td>
+			
+			<td class="">
+				<div class="btns">
+					<a class="button view mr10" href="{$host}licai/view/id/{$row.product_id}"><span>查看</span></a>
+				</div>
+			</td>
+			
+		</tr>
+		{/foreach}
+	</tbody>
+</table>

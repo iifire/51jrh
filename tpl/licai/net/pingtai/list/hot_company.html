@@ -1,0 +1,27 @@
+<div class="block">
+	<div class="block-title">
+		<h2><i class="fa fa-hand-o-right"></i>热门平台推荐</h2>
+	</div>
+	<div class="block-content p5">
+		<ul class="links hot-links">
+			<li class="title"><label>平台名称</label><span>年收益(%)</span></li>
+		</ul>
+		<div class="clearer"></div>
+		<ul class="links hot-links">
+			{assign var="i" value="0"}
+			{foreach from=$company_hot item=row}
+			<li>
+				
+				<a href="{$row.company_url}" title="{$row.company_name}" target="_blank">
+					<i class="number {if $i<3}top{/if}">{$i=$i+1}{$i}</i>
+					<span class="name">{$row.company_name}</span>
+					
+					<span class="rate">{$row.company_rate_average}%</span>
+				</a>
+			</li>
+			{/foreach}
+		
+		</ul>
+	
+	</div>
+</div>

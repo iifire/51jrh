@@ -1,0 +1,23 @@
+<table width="100%" class="hot-products">
+	<colgroup>
+		<col width="6%" />
+		<col width="34%" />
+		<col width="40%" />
+		<col width="20%" />
+	</colgroup>
+	<tbody>
+		{assign var="i" value="0"}
+		{foreach from=$product item=row}
+		<tr class="t">
+			<td rowspan="2">{$i=$i+1}<i class="cirle {if $i<4}top{/if}">{$i}</i></td>
+			<td class="name" colspan="2"><a href="#">{$row.product_name}&nbsp;&nbsp;{$row.product_partner}</a></td>
+			<td class="a-right">预计年收益</td>
+		</tr>
+		<tr class="b">
+			<td class="per"  colspan="2">每万份日收益：{$row.product_profit_yesterday}元   月收益： {$row.product_profit_yesterday*30}元</td>
+			
+			<td class="rate a-right">{$row.product_rate_week}%</td>
+		</tr>
+		{/foreach}
+	</tbody>
+</table>

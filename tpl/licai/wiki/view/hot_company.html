@@ -1,0 +1,14 @@
+<div class="block">
+	<div class="block-title">
+		<h2>热门平台推荐</h2>
+	</div>
+	<div class="block-content">
+		<ul clas="links">
+			{foreach from=$company_hot item=row}
+			<li><a href="{$row.company_url}" title="{$row.company_name}：{$row.company_hot_slogan}" target="_blank">{$row.company_name}：{$row.company_hot_slogan}</a></li>
+			{/foreach}
+		
+		</ul>
+	
+	</div>
+</div>

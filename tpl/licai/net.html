@@ -1,0 +1,94 @@
+{include file="licai/header.html"}
+{include file="licai/submenu.html"}
+<div class="c_ctn col1">
+    <div class="main w1100">
+    	<div class="breadcrumbs">
+    		<ul>
+    			<li class="home">
+                    <a title="MAYA首页" href="{$host}">MAYA首页</a>
+                    <span class="gt">&gt;&gt;</span>
+                    
+                </li>
+                <li class="home">
+                    <a title="" href="{$host}licai/p2p/">宝宝理财</a>
+                    <span class="gt">&gt;&gt;</span>
+                </li>
+                <li>宝宝理财首页</li>
+            </ul>
+        </div>
+        <div class="w1100">
+			<div class="col-main">
+				<div class="f-left box w340">
+					<div class="sub-title pr">
+			    		<h2>宝宝理财收益排行榜</h2>
+			    		<p class="more pa"><a href="" title="">更多&gt;&gt;</a></p>
+			    		<div class="clearer"></div>
+		    		</div>
+		    		<div class="">
+		    			{assign var=product value=$hot_product}
+		    			{include file="licai/net/index/hot_product.html"}
+		    			
+		    		</div>
+					<div class="clearer"></div>
+				</div>
+				<div class="f-right w370 box">
+					<div class="sub-title pr">
+			    		<h2>热点关注</h2>
+			    		<p class="more pa"><a href="" title="">更多&gt;&gt;</a></p>
+			    		<div class="clearer"></div>
+		    		</div>
+		    		<div class="">
+		    			{include file="licai/p2p/index/hot_news.html"}
+		    			
+		    		</div>
+					<div class="clearer"></div>
+				</div>
+				<div class="clearder"></div>
+				<div class="f-fix box mt15">
+					<div class="sub-title pr ">
+			    		<h2>年化利率走势</h2>
+			    		<p class="more pa"><a href="" title=""></a></p>
+			    		<div class="clearer"></div>
+		    		</div>
+		    		<div class="mt10">
+			    		<ul class="links slider-small">
+			    		{foreach from=$company_act item=row}
+			    			<li>
+			    				<p class="img"><a  href="{$row.act_url}" target="_blank" title="{$row.act_title}"><img alt="{$row.act_title}" src="{$host}{$row.act_img}" width="180" height="120" /></a></p>
+			    				<p class="no-margin"><a href="{$row.act_url}" target="_blank" title="{$row.act_title}">{$row.act_title}</a></p>
+			    			</li>
+			    		{/foreach}
+			    		</ul>
+		    		</div>
+					<div class="clearder"></div>
+				</div>
+				
+				
+				
+			</div>
+		    <div class="col-right sidebar">
+		    
+		    </div>
+        	
+        </div>
+        <div class="f-fix box mt15">
+			<div class="sub-title pr ">
+	    		<h2>产品大全</h2>
+	    		<p class="more pa"><a href="" title=""></a></p>
+	    		<div class="clearer"></div>
+    		</div>
+    		{assign var=product value=$all_product}
+    		{include file="licai/net/index/all_product.html"}
+			<div class="clearder"></div>
+		</div>
+        <div class="f-fix box mt15">
+			<div class="sub-title pr ">
+	    		<h2>友情链接</h2>
+	    		<div class="clearer"></div>
+    		</div>
+    		
+			<div class="clearder"></div>
+		</div>
+    </div>
+</div>
+{include file="include/footer.html"}
